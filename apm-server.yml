@@ -1,0 +1,20 @@
+apm-server:
+  host: "0.0.0.0:8200"
+  secret_token: ${ELASTIC_APM_SECRET_TOKEN}
+
+setup.kibana:
+  host: ${KIBANA_HOSTS}
+  username: ${ELASTIC_USER}
+  password: ${ELASTIC_PASSWORD} 
+
+setup.template.enabled: true
+
+output.elasticsearch:
+  hosts: ${ELASTIC_HOSTS}
+  username: ${ELASTIC_USER}
+  password: ${ELASTIC_PASSWORD}
+
+http.enabled: true
+http.port: 5066
+http.host: 0.0.0.0
+monitoring.enabled: false
